@@ -1,4 +1,4 @@
-# Basement4 encode and decode tool
+# Base64 encode and decode tool
 
 ## Usage
 ```
