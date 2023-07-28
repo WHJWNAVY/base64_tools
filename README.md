@@ -90,5 +90,25 @@ $ ./base16 -k qwertyuiopasdfgh -d uwuwueueururututuyuyuuuuui
 (main:330) Get string [uwuwueueururututuyuyuuuuui] size [26]!
 (main:346) Base16 Decode:
 aabbccddeeffg
+
+$ ./base16 -k base16qwrtyQWRTY789456 -f testfile -o output.encode
+(main:291) Input file [testfile]!
+(main:296) Output file [output.encode]!
+(main:301) Input Key [base16qwrtyQWRTY789456]!
+(main:305) Use Base16 Key [base16qwrtyQWRTY]!
+(main:341) Get file buff size [21336]!
+(main:357) Base16 Encode:
+
+$ ./base16 -k base16qwrtyQWRTY789456 -f output.encode -d -o output.decode
+(main:291) Input file [output.encode]!
+(main:296) Output file [output.decode]!
+(main:301) Input Key [base16qwrtyQWRTY789456]!
+(main:305) Use Base16 Key [base16qwrtyQWRTY]!
+(main:341) Get file buff size [42672]!
+(main:346) Base16 Decode:
+
+$ md5sum testfile output.decode
+4bc6624631eed6c9db960300a76cf1a9  testfile
+4bc6624631eed6c9db960300a76cf1a9  output.decode
 ```
 
